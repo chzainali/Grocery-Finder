@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".user.fragments.ProductDetailsFragment">
+
+    <include
+        android:id="@+id/rlTop"
+        layout="@layout/top_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlTop">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+
+                    <ImageView
+                        android:id="@+id/ivImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="10dp"
+                        android:src="@drawable/ic_baseline_add_24" />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/inputOuterFieldStyle"
+                    android:layout_marginHorizontal="16dp"
+                    android:textColorHint="@color/main"
+                    app:boxStrokeColor="@color/main"
+                    android:layout_marginTop="20dp"
+                    app:hintTextColor="@color/main">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nameEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Product Name"
+                        android:focusable="false"
+                        android:enabled="false"
+                        android:clickable="false"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+                        android:textColor="@color/main"
+                        android:inputType="text"
+                        android:visibility="visible" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/priceLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/inputOuterFieldStyle"
+                    android:layout_marginHorizontal="16dp"
+                    android:textColorHint="@color/main"
+                    app:boxStrokeColor="@color/main"
+                    android:layout_marginTop="20dp"
+                    app:hintTextColor="@color/main">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/priceEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Product Price"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:textColor="@color/main"
+                        android:inputType="number"
+                        android:visibility="visible" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/quantityLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/inputOuterFieldStyle"
+                    android:layout_marginHorizontal="16dp"
+                    android:textColorHint="@color/main"
+                    app:boxStrokeColor="@color/main"
+                    android:layout_marginTop="20dp"
+                    app:hintTextColor="@color/main">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/quantityEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Product Quantity"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:textColor="@color/main"
+                        android:inputType="number"
+                        android:visibility="visible" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/descriptionLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/inputOuterFieldStyle"
+                    android:layout_marginHorizontal="16dp"
+                    android:textColorHint="@color/main"
+                    app:boxStrokeColor="@color/main"
+                    android:layout_marginTop="20dp"
+                    app:hintTextColor="@color/main">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/descriptionEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Product Description"
+                        android:focusable="false"
+                        android:enabled="false"
+                        android:clickable="false"
+                        android:textColor="@color/main"
+                        android:inputType="textMultiLine"
+                        android:visibility="visible" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/locationLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/inputOuterFieldStyle"
+                    android:layout_marginHorizontal="16dp"
+                    android:textColorHint="@color/main"
+                    app:boxStrokeColor="@color/main"
+                    android:layout_marginTop="20dp"
+                    app:hintTextColor="@color/main">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/locationEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Shop Location"
+                        android:focusable="false"
+                        android:enabled="false"
+                        android:clickable="false"
+                        android:textColor="@color/main"
+                        android:inputType="textMultiLine"
+                        android:visibility="visible" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCart"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_field"
+                    android:backgroundTint="@color/main"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    android:text="Add to Cart"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="5dp" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDirection"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_field"
+                    android:backgroundTint="@color/main"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    android:text="Direction on Map"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

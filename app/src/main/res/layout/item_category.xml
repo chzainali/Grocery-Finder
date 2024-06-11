@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp"
+            android:layout_margin="2dp">
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/app_logo" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_toEndOf="@+id/cvImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Walk"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/main"
+            android:fontFamily="sans-serif-black" />
+
+        <ImageView
+            android:visibility="visible"
+            android:id="@+id/ivDelete"
+            android:layout_toLeftOf="@+id/ivRight"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_delete_24"
+            app:tint="@color/main"/>
+
+        <ImageView
+            android:id="@+id/ivRight"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_right_24"
+            app:tint="@color/main"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rlMain"
+        android:background="@color/main" />
+
+</RelativeLayout>
